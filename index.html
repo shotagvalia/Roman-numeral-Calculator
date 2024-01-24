@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Roman numeral Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Roman Numeral Calculator</h1>
+    </header>
+    <main id="main-card">
+      <section id="info">
+        <table>
+          <tr>
+            <th>
+              Roman <br />
+              Numeral
+            </th>
+            <th>
+              Number <br />
+              Value
+            </th>
+          </tr>
+          <tr>
+            <td class="text">I</td>
+            <td class="number">1</td>
+          </tr>
+          <tr>
+            <td class="text">V <br /></td>
+            <td class="number">5</td>
+          </tr>
+          <tr>
+            <td class="text">X</td>
+            <td class="number">10</td>
+          </tr>
+          <tr>
+            <td class="text">L</td>
+            <td class="number">50</td>
+          </tr>
+          <tr>
+            <td class="text">C</td>
+            <td class="number">100</td>
+          </tr>
+          <tr>
+            <td class="text">D</td>
+            <td class="number">500</td>
+          </tr>
+          <tr>
+            <td class="text">M</td>
+            <td class="number">1,000</td>
+          </tr>
+        </table>
+      </section>
+      <div id="calculator">
+        <label for="Rnumber">Numbers to Roman Numerals</label><br /><br />
+        <input type="number" name="Rnumber" id="Rnumber" value="" />
+      </div>
+    </main>
+    <p id="empty"></p>
+    <div id="buttons">
+      <button id="clear">Clear</button>
+      <button id="calculate">Calculate</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

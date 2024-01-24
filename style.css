@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(205, 199, 199);
+  height: 100vh;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: black;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+table th,
+td {
+  border: 1.5px solid black;
+}
+th {
+  font-size: 21px;
+  padding: 10px 10px;
+}
+.text {
+  font-size: 17px;
+  text-align: center;
+}
+.number {
+  text-align: right;
+}
+#calculator {
+  margin-top: 50px;
+  font-size: 19px;
+}
+#Rnumber {
+  width: 220px;
+}
+#buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 110px;
+}
+#empty {
+  margin-top: 30px;
+  display: "none";
+  text-align: center;
+  font-size: 21px;
+}
