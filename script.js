@@ -33,7 +33,7 @@ buttonCalculate.addEventListener("click", () => {
 });
 
 const convertToRoman = (num) => {
-  var ref = [
+  let ref = [
     ["M", 1000],
     ["CM", 900],
     ["D", 500],
@@ -48,7 +48,7 @@ const convertToRoman = (num) => {
     ["IV", 4],
     ["I", 1],
   ];
-  var res = [];
+  let res = [];
 
   ref.forEach((p) => {
     while (num >= p[1]) {
