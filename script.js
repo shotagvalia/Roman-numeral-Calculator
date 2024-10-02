@@ -1,14 +1,9 @@
 let userNumber = document.getElementById("Rnumber");
-// console.log(userNumber);
 let buttonClear = document.getElementById("clear");
-// console.log(buttonClear);
 let buttonCalculate = document.getElementById("calculate");
-// console.log(buttonCalculate);
 let emptyParagraph = document.getElementById("empty");
-// console.log(emptyParagraph);
 
 userNumber.addEventListener("input", () => {
-  // console.log(userNumber.value);
   if (userNumber.value <= 0 || userNumber.value > 3999) {
     userNumber.value = "";
     emptyParagraph.style.display = "block";
@@ -16,13 +11,16 @@ userNumber.addEventListener("input", () => {
   }
 });
 
-buttonClear.addEventListener("click", () => {
-  userNumber.value = "";
-  emptyParagraph.style.display = "none";
+userNumber.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    let toNumber = Number(userNumber.value);
+    emptyParagraph.style.display = "block";
+    emptyParagraph.textContent = convertToRoman(toNumber);
+  }
 });
 
 buttonCalculate.addEventListener("click", () => {
-  if (userNumber.value !== "") {
+  if (userNumber.value) {
     let toNumber = Number(userNumber.value);
     emptyParagraph.style.display = "block";
     // emptyParagraph.style.background = "white";
@@ -30,6 +28,12 @@ buttonCalculate.addEventListener("click", () => {
     // console.log(typeof emptyDiv.textContent);
     // console.log(emptyDiv.textContent);
   }
+});
+
+// Clear input and hide emptyParagraph
+buttonClear.addEventListener("click", () => {
+  userNumber.value = "";
+  emptyParagraph.style.display = "none";
 });
 
 const convertToRoman = (num) => {
@@ -48,6 +52,7 @@ const convertToRoman = (num) => {
     ["IV", 4],
     ["I", 1],
   ];
+
   let res = [];
 
   ref.forEach((p) => {
@@ -56,5 +61,6 @@ const convertToRoman = (num) => {
       num -= p[1];
     }
   });
+
   return res.join("");
 };
